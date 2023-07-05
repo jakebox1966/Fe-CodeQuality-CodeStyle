@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "env": {
+        "node": true
+      },
+      "files": [
+        ".eslintrc.{js,cjs}"
+      ],
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    /* 필요한 규칙에 대해 eslint가 error로 표현할지 warn으로 표현할지 결정 */
+
+    /* 사용하지 않는 변수 */
+    "no-unused-vars": "error",
+
+    /* console 사용 */
+    "no-console": "warn"
+  }
+}
